@@ -6,28 +6,74 @@
 	</title>
 	      <meta charset="utf-8">
 
+
+	      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	      <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 
 <body>
+	<div class="container">
 	<h1> Game of Thrones</h1>
-	
-	<img src="images/baratheon.png" id="baratheon" class="sigil">
-	<img src="images/lannister.jpg" id="lannister" class="sigil">
-	<img src="images/stark.jpg" id="stark" class="sigil">
-	<img src="images/targaryen.jpg" id="targaryen" class="sigil">
+	<div id="carousel" class="carousel slide" data-ride="carousel">
+		 <ol class="carousel-indicators">
+    		<li data-target="#carousel" data-slide-to="0" class="active"></li>
+   			<li data-target="#carousel" data-slide-to="1"></li>
+    		<li data-target="#carousel" data-slide-to="2"></li>
+    		<li data-target="#carousel" data-slide-to="3"></li>
+  		</ol>
 
-	<div id="houseinfo" num="0">
+
+  		<div class="carousel-inner">
+    		<div class="carousel-item active">
+      			<img class="d-block w-100" src="images/stark.jpg" id="stark"  alt="First slide">      
+    		</div>
+    		<div class="carousel-item">
+      			<img class="d-block w-100" src="images/targaryen.jpg" id="targaryen" alt="Second slide">
+    		</div>
+    		<div class="carousel-item">
+     			<img class="d-block w-100" src="images/lannister.jpg" id="lannister" alt="Third slide">
+    		</div>
+    		<div class="carousel-item">
+     	 		<img class="d-block w-100" src="images/baratheon.png" id="baratheon" alt="Fourth slide">
+    		</div>
+      		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    			<span class="sr-only">Previous</span>
+  			</a>
+  			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    			<span class="sr-only">Next</span>
+  			</a>
+  		</div>
+	</div>
+
+	
+		
+	
+
+
+
+	<div id="houseinfo" num="0" class="rounded">
 		<h4 id="housename"></h4>
 		<p id="housewords"></p>
 		<p id="titles"></p>
 	</div>
-	<button class="button" id="prev_house">Previous House</button>
-	<button class="button" id="next_house">Next House</button>
 
+	<div class="row">
+		<div class="col-sm"></div>
+		<div class="col-sm"></div>
+		<div class="col-sm"></div>
+	</div>
+
+	<button id="prev_house" class="btn btn-info">Previous House</button>
+	<button id="next_house" class="btn btn-info">Next House</button>
+</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="main.js"></script>
 
 

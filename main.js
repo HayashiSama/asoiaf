@@ -1,6 +1,23 @@
 $(document).ready(function()
 {
-	$(".button").click(function()
+	$('.carousel').carousel({
+  		interval: 5000
+	})
+
+	$('.carousel-control-next').click(function()
+	{
+		$('.carousel').carousel('next');
+	})
+
+	$('.carousel-control-prev').click(function()
+	{
+		$('.carousel').carousel('prev');
+	})
+
+	
+	
+
+	$(".btn").click(function()
 	{
 
 		if($(this).attr("id") == "prev_house" && $("#houseinfo").attr("num")>1)
@@ -17,14 +34,14 @@ $(document).ready(function()
 		}
 	})
 
-	$(".sigil").click(function()
+	$(".d-block").click(function()
 	{
 
 		var id=$(this).attr("id");
 		var dict =
 		{
 			"lannister": 229,
-			"baratheon": 15,
+			"baratheon": 17,
 			"stark":362,
 			"targaryen": 378
 		}
@@ -44,11 +61,11 @@ $(document).ready(function()
 			$.get(URL, function(data)
 		{
 
-			$("#housename").text("Name:" + data.name);
-			$("#housewords").text("Words:" + data.words);
+			$("#housename").text("Name: " + data.name);
+			$("#housewords").text("Words: " + data.words);
 			$("#houseinfo").attr("num", housenumber);
 
-			var titlestotal=""
+			var titlestotal=" ";
 			for(var i = 0; i < data.titles.length; i++)
 			{
 				titlestotal += data.titles[i];
@@ -59,6 +76,33 @@ $(document).ready(function()
 			}
 
 			$("#titles").text("Titles:" + data.titles);
+			if(housenumber==378)
+			{
+				$("#houseinfo").css("background-color", '#e3dcc0'); //tan
+				$("#houseinfo").css("color", '#000000'); //black
+			}
+			else if(housenumber==17)
+			{
+				$("#houseinfo").css("background-color", '#b08941');
+				$("#houseinfo").css("color", '#4b4b54');
+
+			}
+			else if(housenumber==362)
+			{
+				$("#houseinfo").css("background-color", '#686763'); //grey
+				$("#houseinfo").css("color", '#FFFFFF');
+				
+			}
+			else if(housenumber==229)
+			{
+				$("#houseinfo").css("background-color", '#904041' );
+				$("#houseinfo").css("color", '#c69f26');
+			}
+			else
+			{
+				$("#houseinfo").css("background-color", 'white' );
+				$("#houseinfo").css("color", 'black');
+			}
 
 		}, 'json');
 		}

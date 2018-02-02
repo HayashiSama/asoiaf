@@ -1,16 +1,32 @@
-.sigil
-{
-	width:250px;
-	vertical-align: top;
-}
+
 *{
 	font-family: sans-serif;
 }
 #houseinfo
 {
 	margin-top: 10px;
-	width:1000px;
-	height:200px;
-	padding:10px;
+	width:100%;
+	padding-bottom:20%;
 	border: 1px solid black;
+	max-height: 320px;
+	margin-bottom: 10px;
+}
+
+#houseinfo:after{
+	content:"";
+	display: block;
+	padding-bottom:20%;
+	max-height: 300px;
+}
+
+h4{
+	margin:10px;
+}
+p{
+	margin:10px;
+}
+
+.d-block {
+    max-height:400px;
+    width:100%;
 }
