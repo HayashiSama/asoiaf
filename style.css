@@ -1,0 +1,16 @@
+.sigil
+{
+	width:250px;
+	vertical-align: top;
+}
+*{
+	font-family: sans-serif;
+}
+#houseinfo
+{
+	margin-top: 10px;
+	width:1000px;
+	height:200px;
+	padding:10px;
+	border: 1px solid black;
+}
